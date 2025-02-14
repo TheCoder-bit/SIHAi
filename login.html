@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+        /* Add CSS styles for the background video */
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Ensure the video is behind all other content */
+        }
+    
+        .content {
+            position: relative;
+            z-index: 1; /* Ensure content is above the video */
+        }
+    
+        .nav, .form-box, .input-box, .two-col {
+            margin-bottom: 20px; /* Add spacing after each container */
+        }
+    
+        .input-box {
+            margin-bottom: 15px; /* Add extra spacing between input fields */
+        }
+    
+        .nav-logo {
+            display: flex;
+            align-items: center;
+        }
+    
+        .nav-logo img {
+            height: 40px; /* Adjust the height of the logo image as needed */
+            margin-right: 20px; /* Increase space between the logo image and the text */
+        }
+    
+        .nav-logo .logo-text {
+            font-size: 24px; /* Adjust the font size as needed */
+            font-weight: 700; /* Bold text */
+            color: #fff; /* Change the text color as needed */
+        }
+    
+        /* About button tooltip styles */
+        .nav-menu .about-container {
+            position: relative;
+            display: inline-block;
+        }
+    
+        .nav-menu .about-container .tooltip {
+            visibility: hidden;
+            width: 1000px; /* Increased width to fit more text */
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 30px;
+            padding: 15px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Position above the button */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            line-height: 1.4; /* Adjust line height to reduce space between lines */
+        }
+    
+        .nav-menu .about-container:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+    
+        .nav-menu .about-container .tooltip::after {
+            content: " Gesture-Glyph is a system which captures non–manual features of Indian sign language to text/speech.\A The project will enhance communication between the ​Dumb/Deaf and Normal people.\A ​This system is built by Team Risers. ";
+            position: absolute;
+            top: 250%; /* Arrow at the bottom of the tooltip */
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+    
+        /* Services button tooltip styles */
+        .nav-menu .services-container {
+            position: relative;
+            display: inline-block;
+        }
+    
+        .nav-menu .services-container .tooltip {
+            visibility: hidden;
+            width: 1000px; /* Same width for the tooltip */
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 30px;
+            padding: 15px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Position above the button */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            line-height: 1.4; /* Adjust line height to reduce space between lines */
+        }
+    
+        .nav-menu .services-container:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+    
+        .nav-menu .services-container .tooltip::after {
+            content: " Gesture-Glyph offers a variety of services related to non-manual feature detection in Indian sign language, converting gestures into text or speech for improved communication. ";
+            position: absolute;
+            top: 250%; /* Arrow at the bottom of the tooltip */
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 ;
+        }
+    </style>
+</head>
+<body>
+    <!-- Video element -->
+    <video class="background-video" autoplay muted loop>
+        <source src="C:\\Users\\ganta\\OneDrive\\Desktop\\FE\\Teal Black Abstract Color and Style Video Background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Your content goes here -->
+    <div class="content">
+        <div class="wrapper">
+            <nav class="nav">
+                <div class="nav-logo">
+                    <img src="C:\\Users\\ganta\\OneDrive\\Desktop\\FE\\LOGO.jpg" alt="GLESTURE-GLYPH Logo">
+                    <span class="logo-text">GESTURE-GLYPH</span>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <ul>
+                        <li><a href="#" class="link active">Home</a></li>
+                        <li class="about-container">
+                            <a href="#" class="link">About</a>
+                            <div class="tooltip">
+                                Gesture-Glyph is a system which captures non-manual features of Indian sign language to text/speech. The project will enhance communication between the Dumb/Deaf and Normal people. This system is built by Team Risers.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-button">
+                    <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+                    <button class="btn" id="registerBtn" onclick="register()">Register</button>
+                </div>
+                <div class="nav-menu-btn">
+                    <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+                </div>
+            </nav>
+
+            <!----------------------------- Form box -----------------------------------> 
+            <div class="form-box">
+                <!------------------- login form ---------------------------> 
+                <div class="login-container" id="login">
+                    <div class="top">
+                        <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                        <header>Login</header>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Username or Email">
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input-field" placeholder="Password">
+                        <i class="bx bx-lock-alt"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" class="submit" value="Sign In" onclick="redirectToIndex()">
+                    </div>
+                    <div class="two-col">
+                        <div class="one">
+                            <input type="checkbox" id="login-check">
+                            <label for="login-check"> Remember Me</label>
+                        </div>
+                        <div class="two">
+                            <label><a href="#">Forgot password?</a></label>
+                        </div>
+                    </div>
+                </div>
+
+                <!------------------- registration form ---------------------------> 
+                <div class="register-container" id="register">
+                    <div class="top">
+                        <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+                        <header>Sign Up</header>
+                    </div>
+                    <div class="two-forms">
+                        <div class="input-box">
+                            <input type="text" class="input-field" placeholder="Firstname">
+                            <i class="bx bx-user"></i>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" class="input-field" placeholder="Lastname">
+                            <i class="bx bx-user"></i>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Email">
+                        <i class="bx bx-envelope"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input-field" placeholder="Password">
+                        <i class="bx bx-lock-alt"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" class="submit" value="Register" onclick="redirectToIndex()">
+                    </div>
+                    <div class="two-col">
+                        <div class="one">
+                            <input type="checkbox" id="register-check">
+                            <label for="register-check"> Remember Me</label>
+                        </div>
+                        <div class="two">
+                            <label><a href="#">Terms & conditions</a></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+
+    <script>
+        function myMenuFunction() {
+            var i = document.getElementById("navMenu");
+
+            if(i.className === "nav-menu") {
+                i.className += " responsive";
+            } else {
+                i.className = "nav-menu";
+            }
+        }
+
+        var a = document.getElementById("loginBtn");
+        var b = document.getElementById("registerBtn");
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+
+        function login() {
+            x.style.left = "4px";
+            y.style.right = "-520px";
+            a.className += " white-btn";
+            b.className = "btn";
+            x.style.opacity = 1;
+            y.style.opacity = 0;
+        }
+
+        function register() {
+            x.style.left = "-510px";
+            y.style.right = "5px";
+            a.className = "btn";
+            b.className += " white-btn";
+            x.style.opacity = 0;
+            y.style.opacity = 1;
+        }
+
+        function redirectToIndex() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

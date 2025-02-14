@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture - Glyph | About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Base styles for About Us section */
+        .about-us {
+            display: flex;
+            align-items: center;
+            padding: 40px;
+            background-color: #f9f9f9;
+            border-top: 2px solid #e0e0e0;
+            border-bottom: 2px solid #e0e0e0;
+            overflow: hidden; /* Ensures animations don't overflow their container */
+        }
+
+        .about-us .text, .about-us .photo {
+            flex: 1;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        .about-us .photo {
+            display: flex;
+            justify-content: center;
+            animation: zoomIn 1s forwards;
+        }
+
+        .about-us .text {
+            padding-right: 20px;
+            animation-delay: 0.5s; /* Delays the text animation to start after the photo */
+        }
+
+        .about-us .text h2 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-us .text p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .about-us .photo img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Styles for Meet Our Team section */
+        .meet-team {
+            padding: 40px;
+            background-color: #e0f7fa;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+            animation-delay: 1s; /* Delays the animation to start after the About Us section */
+        }
+
+        .meet-team h2 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #00796b;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .meet-team p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #004d40;
+        }
+
+        /* Styles for Team Members Section */
+        .team-members {
+            padding: 40px;
+            background-color: #ffffff;
+        }
+
+        .team-members .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .team-members .team-box {
+            flex: 1 1 30%;
+            max-width: 30%;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .team-members .team-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .team-members .team-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .team-members .team-box .team-info {
+            padding: 20px;
+        }
+
+        .team-members .team-box .team-info h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .team-members .team-box .team-info p {
+            font-size: 1em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="LOGO.jpg" alt="Gesture Logo" class="logo">
+                <h1 class="company-name">Gesture - Glyph</h1>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">GG</a></li>
+                    
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="features.html">Features</a></li>
+
+                    <li><a href="about.html">About Us</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <div class="text">
+            <h2>Discover Gesture-Glyph's Impact</h2>
+            <p><strong>Founded in 2023, Gesture-Glyph is dedicated to bridging communication gaps between Deaf and hearing communities. Our innovative software converts non-manual features of Indian Sign Language into text and speech, fostering inclusivity and understanding.</strong></p>
+        </div>
+        <div class="photo">
+            <img src="LOGO.jpg" alt="Gesture-Glyph Team">
+        </div>
+    </section>
+
+    <!-- Meet Our Team Section -->
+    <section class="meet-team">
+        <h2>Meet Our Team</h2>
+        <p><strong>Get to know the passionate individuals behind Gesture-Glyph, dedicated to bridging communication gaps.</strong></p>
+    </section>
+
+    <!-- Team Members Section -->
+    <section class="team-members">
+        <div class="team-container">
+            <!-- Team Member 1 -->
+            <div class="team-box">
+                <img src="WhatsApp Image 2024-09-19 at 19.18.24_4186a164.jpg" alt="Team Member 1">
+                <div class="team-info">
+                    <h3>G.Akhil Reddy</h3>
+                    
+                </div>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="team-box">
+                <img src="WhatsApp Image 2024-09-19 at 19.20.24_39d06e76.jpg" alt="Team Member 2">
+                <div class="team-info">
+                    <h3>G.Tharun Kumar</h3>
+                    
+                </div>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="team-box">
+                <img src="WhatsApp Image 2024-09-19 at 19.45.15_4a9f2742.jpg" alt="Team Member 3">
+                <div class="team-info">
+                    <h3>M.Rajesh</h3>
+            
+                </div>
+            </div>
+            <!-- Team Member 4 -->
+            <div class="team-box">
+                <img src="WhatsApp Image 2024-09-19 at 20.28.13_bc4ee3ae.jpg" alt="Team Member 4">
+                <div class="team-info">
+                    <h3>D.Rohini Reddy</h3>
+                    
+                </div>
+            </div>
+            <!-- Team Member 5 -->
+            <div class="team-box">
+                <img src="team-member5.jpg" alt="Team Member 5">
+                <div class="team-info">
+                    <h3>N.Akhila</h3>
+                    
+                </div>
+            </div>
+            <!-- Team Member 6 -->
+            <div class="team-box">
+                <img src="team-member6.jpg" alt="Team Member 6">
+                <div class="team-info">
+                    <h3>M.Pranitha</h3>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p class="footer-text">© 2024 Gesture-Glyph. All rights reserved.</p>
+                <a href="terms.html" class="footer-link">Terms and Conditions</a>
+            </div>
+            <div class="footer-right">
+                <a href="https://www.facebook.com/yourpage" class="social-link" target="_blank">
+                    <img src="image.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/yourpage" class="social-link" target="_blank">
+                    <img src="INSTA.jpg" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://www.x.com/yourpage" class="social-link" target="_blank">
+                    <img src="x.webp" alt="X" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

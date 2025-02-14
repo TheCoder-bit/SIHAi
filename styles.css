@@ -1,0 +1,440 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: white;
+    padding: 20px 0;
+    position: relative;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Logo and Company Name Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.company-name {
+    color: black;
+    font-size: 24px;
+}
+
+/* Navigation Bar Styling */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: blue;
+}
+
+/* GG Section Styling */
+.gg {
+    padding: 150px 0;
+    display: block;
+}
+
+.gg-container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gg-title {
+    font-size: 36px;
+    color: black;
+}
+
+.gg-content {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Latest Technologies Section Styling */
+.tech {
+    padding: 150px 0;
+    background-color: #f4f4f4;
+}
+
+.tech-container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tech-title {
+    font-size: 36px;
+    color: black;
+}
+
+.tech-content {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Options Section Styling */
+.options {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.options-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.option-box {
+    width: 30%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.option-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.option-image {
+    width: 100%;
+    height: auto;
+}
+
+.option-info {
+    padding: 20px;
+}
+
+.option-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.option-description {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Email Subscription Section Styling */
+.subscription {
+    padding: 50px 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.subscription-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.subscription-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.subscription-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.subscription-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.subscription-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.subscription-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscription-button:hover {
+    background-color: #555;
+}
+
+/* Footer Section Styling */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    border-top: 1px solid white;
+    text-align: center;
+}
+
+.footer-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 16px;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ddd;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.social-link {
+    margin-left: 15px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+/* Technology Section Styling */
+.technology {
+    position: relative;
+    text-align: center;
+    color: white; /* Add your photo here */
+    height: 100vh; /* Full viewport height */
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.technology-text {
+    position: relative;
+    z-index: 1;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px; /* Optional: rounded corners */
+    background: rgba(255, 255, 255, 0.7); /* Slightly opaque background for readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: shadow for better readability */
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.technology-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.technology-text p {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #333; /* Text color for the description */
+    line-height: 1.6;
+}
+
+.underline-animation {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-animation::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.underline-animation:hover::after {
+    width: 100%;
+}
+
+/* Zoom on Scroll Animation */
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+.technology {
+    animation: zoomIn 3s ease-in-out;
+}
+/* How Gesture Glyph Works Section Styling */
+/* How Gesture Glyph Works Section Styling */
+/* How Gesture Glyph Works Section Styling */
+.how-it-works {
+    padding: 60px 0;
+    background-color: #f4f8f9;
+    position: relative;
+    overflow: hidden;
+    opacity: 0; /* Start hidden */
+    transition: opacity 1s ease-in-out;
+}
+
+.how-it-works.in-view {
+    opacity: 1; /* Fade in when in view */
+}
+
+.how-it-works-title {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.how-it-works-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 10px auto;
+}
+
+.how-it-works-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.column {
+    flex: 1;
+    min-width: 300px;
+    margin: 0 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+}
+
+.how-it-works-description {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+/* Basic setup for sliding animations */
+.section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Style for active section */
+.section.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    z-index: 2;
+}
+
+/* Style for previous section */
+.section.prev {
+    transform: translateX(-100%);
+}
+
+/* Style for next section */
+.section.next {
+    transform: translateX(100%);
+}

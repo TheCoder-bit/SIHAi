@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture - Glyph</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="LOGO.jpg" alt="Gesture Logo" class="logo">
+                <h1 class="company-name">Gesture - Glyph</h1>
+            </div>
+            <!-- Navigation Bar -->
+            <nav>
+                <ul class="menu">
+                    <li><a href="#gg-section" id="gg-link">GG</a></li>
+                    <li><a href="technology.html" >Technology</a></li> <!-- Technology menu item -->
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- GG Section -->
+    <section id="gg-section" class="gg">
+        <div class="gg-container">
+            <h2 class="gg-title">Welcome to Gesture Glyph!</h2>
+            <p class="gg-content">
+                Gesture-Glyph is a system which captures non-manual features of Indian sign language to text/speech.<br>
+                The project will enhance communication between the Deaf and hearing people.
+            </p>
+        </div>
+    </section>
+    <!-- Technology Section (Initially Hidden) -->
+
+    <!-- Latest Technologies Section -->
+    <section class="tech">
+        <div class="tech-container">
+            <h2 class="tech-title">Try Latest Technologies from GG</h2>
+            <p class="tech-content">
+                Explore our innovative solutions that leverage the latest advancements in technology to provide seamless and intuitive communication tools. From cutting-edge sign language recognition to advanced text-to-speech systems, our technologies are designed to bridge the gap and enhance interactions between users.
+            </p>
+        </div>
+        
+    </section>
+
+    <!-- Options Section -->
+    <section id="options-section" class="options">
+        <div class="options-container">
+            <div class="option-box">
+                <img src="ST.jpg" alt="Sign Language to Text Generator" class="option-image">
+                <div class="option-info">
+                    <h3 class="option-title">Try Sign Language to Text Generator</h3>
+                    <p class="option-description">
+                        Convert Indian sign language into text using our advanced generator. Experience seamless communication with real-time translations.
+                    </p>
+                </div>
+            </div>
+            <div class="option-box">
+                <img src="ED.jpg" alt="Emotional Detector" class="option-image">
+                <div class="option-info">
+                    <h3 class="option-title">Try Emotional Detector</h3>
+                    <p class="option-description">
+                        Analyze emotional states through sign language to better understand and respond to user emotions.
+                    </p>
+                </div>
+            </div>
+            <div class="option-box">
+                <img src="NM.jpg" alt="Non-Manual Features" class="option-image">
+                <div class="option-info">
+                    <h3 class="option-title">Non-Manual Features</h3>
+                    <p class="option-description">
+                        Explore how non-manual features of Indian sign language are captured and translated into meaningful interactions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Subscription Section -->
+    <section id="subscription-section" class="subscription">
+        <div class="subscription-container">
+            <h2 class="subscription-title">Stay Updated!</h2>
+            <p class="subscription-description">Enter your email to receive the latest updates and news from Gesture - Glyph.</p>
+            <form class="subscription-form">
+                <input type="email" placeholder="Your email address" class="subscription-input" required>
+                <button type="submit" class="subscription-button">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p class="footer-text">© 2024 @Gesture-Glyph. All rights reserved.</p>
+                <a href="#" class="footer-link">Terms and Conditions</a>
+            </div>
+            <div class="footer-right">
+                <a href="https://www.facebook.com/yourpage" class="social-link" target="_blank">
+                    <img src="image.png" alt="" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/yourpage" class="social-link" target="_blank">
+                    <img src="INSTA.jpg" alt="" class="social-icon">
+                </a>
+                <a href="https://www.x.com/yourpage" class="social-link" target="_blank">
+                    <img src="x.webp" alt="" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript to Handle Section Visibility -->
+    <script>
+        document.getElementById('technology-menu').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('gg-section').style.display = 'none';
+            document.getElementById('technology-section').style.display = 'block';
+        });
+
+        document.addEventListener('scroll', function() {
+            const techSection = document.getElementById('technology-section');
+            const techSectionTop = techSection.getBoundingClientRect().top;
+            const viewportHeight = window.innerHeight;
+
+            if (techSectionTop < viewportHeight * 0.75) {
+                techSection.classList.add('in-view');
+            } else {
+                techSection.classList.remove('in-view');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture - Glyph | Features</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Base styles for Features section */
+        .features {
+            padding: 40px;
+            background-color: #f0f0f0;
+        }
+
+        .features h2 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .features p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #555;
+            text-align: center;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .feature-item {
+            flex: 1 1 30%;
+            max-width: 30%;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .feature-item h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .feature-item p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #00796b;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left, .footer-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-text {
+            margin-right: 20px;
+        }
+
+        .footer-link {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        .social-link {
+            margin-left: 10px;
+        }
+
+        .social-icon {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="LOGO.jpg" alt="Gesture Logo" class="logo">
+                <h1 class="company-name">Gesture - Glyph</h1>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">GG</a></li>
+                    
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Our Key Features</h2>
+        <p>Discover the innovative features that set Gesture-Glyph apart and enhance communication for everyone.</p>
+        <div class="feature-list">
+            <!-- Feature 1 -->
+            <div class="feature-item">
+                <img src="RTT.jpg" alt="Feature 1">
+                <h3>Real-Time Translation</h3>
+                <p>Seamlessly translate Indian Sign Language into text and speech in real time, making communication fluid and natural.</p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="feature-item">
+                <img src="UFI.jpg" alt="Feature 2">
+                <h3>User-Friendly Interface</h3>
+                <p>Navigate our intuitive interface with ease, designed to be accessible and user-friendly for all ages.</p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="feature-item">
+                <img src="ADVV.png" alt="Feature 3">
+                <h3>Advanced Gesture Recognition</h3>
+                <p>Utilize cutting-edge technology to accurately capture and interpret gestures for effective communication.</p>
+            </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p class="footer-text">© 2024 Gesture-Glyph. All rights reserved.</p>
+                <a href="terms.html" class="footer-link">Terms and Conditions</a>
+            </div>
+            <div class="footer-right">
+                <a href="https://www.facebook.com/yourpage" class="social-link" target="_blank">
+                    <img src="image.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/yourpage" class="social-link" target="_blank">
+                    <img src="INSTA.jpg" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://www.x.com/yourpage" class="social-link" target="_blank">
+                    <img src="x.webp" alt="X" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

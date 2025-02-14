@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture - Glyph | Technology</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="LOGO.jpg" alt="Gesture Logo" class="logo">
+                <h1 class="company-name">Gesture - Glyph</h1>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">GG</a></li>
+                    
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Technology Section -->
+    <section class="technology" style="background-image: url(CT.jpg); border: 30px solid rgb(233, 224, 224); padding-top: 20px;">
+        <div class="technology-text">
+            <h1>Revolutionizing <br> Communication with <br> <strong class="underline-animation">Gesture-Glyph</strong></h1>
+            <p class="tech-description">
+                Discover how Gesture-Glyph is transforming communication by leveraging advanced technology to bridge gaps and enhance interactions.
+            </p>
+        </div>
+    </section>
+
+    <!-- How Gesture Glyph Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="how-it-works-title">How Gesture Glyph Works?</h2>
+            <div class="how-it-works-content">
+                <div class="column">
+                    <p class="how-it-works-description">
+                        At the heart of Gesture-Glyph is cutting-edge technology that captures and interprets the subtle nuances of Indian Sign Language. Our system analyzes facial expressions, hand movements, and body posture with remarkable precision to convert these elements into clear and accurate text and speech.
+                    </p>
+                </div>
+                <div class="column">
+                    <p class="how-it-works-description">
+                        Utilizing advanced machine learning algorithms, Gesture-Glyph continuously learns and improves, ensuring that our translations are always up-to-date and contextually appropriate. Whether you're interacting with a user or engaging with our tools, Gesture-Glyph makes communication effortless and inclusive.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p class="footer-text">© 2024 Gesture-Glyph. All rights reserved.</p>
+                <a href="terms.html" class="footer-link">Terms and Conditions</a>
+            </div>
+            <div class="footer-right">
+                <a href="https://www.facebook.com/yourpage" class="social-link" target="_blank">
+                    <img src="image.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/yourpage" class="social-link" target="_blank">
+                    <img src="INSTA.jpg" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://www.x.com/yourpage" class="social-link" target="_blank">
+                    <img src="x.webp" alt="X" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('scroll', function() {
+            const howItWorksSection = document.getElementById('how-it-works');
+            const howItWorksTop = howItWorksSection.getBoundingClientRect().top;
+            const viewportHeight = window.innerHeight;
+
+            if (howItWorksTop < viewportHeight * 0.75) {
+                howItWorksSection.classList.add('in-view');
+            } else {
+                howItWorksSection.classList.remove('in-view');
+            }
+        });
+    </script>
+</body>
+</html>
